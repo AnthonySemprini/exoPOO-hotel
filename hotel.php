@@ -49,7 +49,7 @@ class Hotel{
 
     public function getInfos(){
         
-         $result ="Nom de l'hotel : ".$this->getNomHotel().
+         $result ="<br><br>Nom de l'hotel : ".$this->getNomHotel().
             "<br>Ville : ".$this->getVille().
             "<br>Adresse : ".$this->getAdresse().
             "<br>Nombre de chambre : ".$this->getNbrChambre();

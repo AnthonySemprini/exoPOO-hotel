@@ -17,7 +17,11 @@ $Hotel1 = new Hotel("Le bouclier d'or","Strasbourg","7 rue du bouclier 67000 Str
 $Hotel2 = new Hotel("Villa d'est","Strasbourg","2 rue Jaques Kable 67000 Strasbourg",55);
 $Hotel3 = new Hotel("Hannong","Strasbourg","8 rue du 22 novembre 67000 Strasbourg",95);
 $Hotel4 = new Hotel("Cathedrle","Strasbourg","12 place de la cathedral 67000 Strasbourg",40);
+
 echo $Hotel1->getInfos();
+echo $Hotel2->getInfos();
+echo $Hotel3->getInfos();
+echo $Hotel4->getInfos();
 
 
 
