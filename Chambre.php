@@ -2,37 +2,53 @@
 
 class Chambre{
 
-    private Hotel $_nomHotel;
+    private int $_chambreNum;
+    private int $_nbrLit;
     private int $_prixChambre;
-    private string $_typeChambre;
+    private bool $_wifi;
 
-    public function __construct(Hotel $_nomHotel, int $_prixChambre, string $_typeChambre){
-        $this->_nomHotel = $_nomHotel;
+
+    public function __construct(Hotel $_chambreNum,int $_nbrLit, int $_prixChambre, bool $_wifi){
+        $this->_chambreNum = $_chambreNum;
+        $this ->_nbrLit = $_nbrLit;
         $this->_prixChambre = $_prixChambre;
-        $this->_typeChambre = $_typeChambre;
+        $this->_wifi = $_wifi;
     }
 
-    public function getNomHotel(): Hotel{
-        return $this->_nomHotel;
+    //getter 
+
+   public function getChambreNum(){
+        return $this->_chambreNum;
     }
-    public function getPrixChambre(): int{
+
+    public function getNbrLit(){
+        return $this->_nbrLit;
+    }
+
+    public function getPrixChambre(){
         return $this->_prixChambre;
     }
-    public function getTypeChambre(): string{
-        return $this->_typeChambre;
+  
+    public function getWifi(){
+        return $this->_wifi;
     }
+//setter
 
 
-    public function setNomHotel(Hotel $_nomHotel){
-        $this->_nomHotel = $_nomHotel;
-    }
-    public function setPrixChambre(int $_prixChambre){
-        $this->_prixChambre = $_prixChambre;
-    }
-    public function setTypeChambre(string $_typeChambre){
-        $this->_typeChambre = $_typeChambre;
-    }
-    public function __toString(){
-        return $this->_nomHotel. " ". $this->_prixChambre. " ". $this->_typeChambre;
-    }
+public function setChambreNum(int $_chambreNum){ 
+    $this->_chambreNum = $_chambreNum;
+}
+public function setNbrLit(int $_nbrLit){
+    $this->_nbrLit = $_nbrLit;
+}
+public function setPrixChambre(int $_prixChambre){
+    $this->_prixChambre = $_prixChambre;
+}       
+public function setWifi(bool $_wifi){
+    $this->_wifi = $_wifi;
+}
+
+public function __toString(){
+    return $this->_chambreNum;
+}
 }

@@ -5,14 +5,16 @@ class Hotel{
     private  $_nomHotel;
     private string $_ville;
     private string $_adresse;
-    private int $_nbrChambre;
+    private array $_chambres = [];
+    private array $_reservations = [];
 
-    public function __construct(string $_nomHotel,string $_ville,string $_adresse,int $_nbrChambre){
+    public function __construct(string $_nomHotel,string $_ville,string $_adresse){
 
         $this->_nomHotel = $_nomHotel;
         $this->_ville = $_ville;
         $this->_adresse = $_adresse;
-        $this->_nbrChambre = $_nbrChambre;
+        $this->_chambres = [];
+        $this->_reservations = [];
 
     }
 
@@ -27,9 +29,7 @@ class Hotel{
     public function getAdresse(){
         return $this->_adresse;
     }
-    public function getNbrChambre(){
-        return $this->_nbrChambre;
-    }
+    
 
     //setter
 
@@ -42,21 +42,18 @@ class Hotel{
     public function setAdresse(string $_adresse){
         $this->_adresse = $_adresse;
     }
-    public function setNbrChambre(int $_nbrChambre){
-        $this->_nbrChambre = $_nbrChambre;
-    }
 
+    // function
 
     public function getInfos(){
         
          $result ="<br><br>Nom de l'hotel : ".$this->getNomHotel().
             "<br>Ville : ".$this->getVille().
-            "<br>Adresse : ".$this->getAdresse().
-            "<br>Nombre de chambre : ".$this->getNbrChambre();
-        return $result;
+            "<br>Adresse : ".$this->getAdresse();
+           return $result;
     }
 
     public function __toString(){
-        return $this->_nomHotel;
+        return $this->_nomHotel.$this->_ville;
     }
 }
