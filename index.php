@@ -20,6 +20,13 @@ $Hotel4 = new Hotel("Cathedrale ***","Strasbourg","12 place de la cathedral 6700
 $Hotel5 = new Hotel("Chateau de l'Ill *****","Ostawald","12 quai Heidth 67200 Ostwald");
 $Hotel6 = new Hotel("Sofitel *****","Strasbourg","2 place saint pierre le jeune 67000 Strasbourg");
 
+
+$client1 = new Client("Muller","Thomas");
+$client2 = new Client("Scofield","Mickeal");
+$client3 = new Client("Semprini","Anthony");
+$client4 = new Client("Holmes","Sherlock");
+
+
 echo $Hotel1->getInfos();
 echo $Hotel2->getInfos();
 echo $Hotel3->getInfos();
