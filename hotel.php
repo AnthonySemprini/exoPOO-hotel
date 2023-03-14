@@ -29,6 +29,9 @@ class Hotel{
     public function getAdresse(){
         return $this->_adresse;
     }
+    public function getReservation(){
+        return $this->_reservation;
+    }
     
 
     //setter
@@ -42,8 +45,22 @@ class Hotel{
     public function setAdresse(string $_adresse){
         $this->_adresse = $_adresse;
     }
+    public function setReservations(string $_reservations){
+        $this->_reservations = $_reservations;
+    }
 
     // function
+
+
+    public function addChambres(Chambre $chambre)
+    {
+        $this->_chambres[] = $chambre;
+    }
+    public function addReservations(Reservation $reservation)
+    {
+        $this->_reservations[] = $reservation;
+
+    }
 
     public function getInfos(){
         
@@ -55,5 +72,18 @@ class Hotel{
 
     public function __toString(){
         return $this->_nomHotel.$this->_ville;
+    }
+
+    public function resaHotel(){
+        $nbResaChambre = count($this->getReservations());
+        echo $this->_nomHotel;
+
+        if( 0 == count($this->_reservations)){
+            echo "Zero reservation";
+        }else{
+            foreach ($this->_reservations as $reservation ){
+                echo $reservation->getClient()->getNom()." ".$reservation->getChambre().$reservation."<br>";
+            }
+        }
     }
 }
